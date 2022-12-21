@@ -36,7 +36,13 @@ metadata:
 spec:
   selector:
     app: chanu
-  replicas: 1
+  replicas: 2
+  minReadySeconds: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 50%
   template:
     metadata:
       labels:
