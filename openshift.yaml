@@ -40,7 +40,7 @@ spec:
   minReadySeconds: 5
   strategy:
     type: Rolling
-    rollingUpdate:
+    rolling:
       maxSurge: 50%
       maxUnavailable: 50%
   template:
